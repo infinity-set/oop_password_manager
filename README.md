@@ -98,7 +98,7 @@ To run the Password Manager Project on your local machine, follow these steps:
 
 1. Clone the repository to your computer.
 2. Install any required dependencies mentioned in the project documentation.
-3. Run the main application script.
+3. Run the main `password_manager_ui.py` application script.
 
 #
 <br>
