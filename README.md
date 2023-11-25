@@ -9,6 +9,8 @@
   - [PasswordGenerator](#2-passwordgenerator)
   - [PasswordSaver](#3-passwordsaver)
   - [PasswordSearcher](#4-passwordsearcher)
+- [Languages and Utilities Used](#languages-and-utilities-used)
+- [Environments Used](#environments-used)
 - [Dependencies](#dependencies)
 - [Getting Started](#getting-started)
 <br>
@@ -24,11 +26,13 @@ If you're interested in the non-OOP version of the Password Manager Project, you
 [Password Manager GUI (Non-OOP Version)](https://github.com/infinity-set/password_manager)
 
 This non-OOP version provides the same password management capabilities but is implemented without the use of OOP principles.
-<br>
+<br><br>
+
 ## Object-Oriented Programming (OOP) Components
 
 The project leverages OOP principles to create a structured and maintainable codebase. Here are the main OOP components in the project:
-<br>
+<br><br>
+
 ### 1. PasswordManagerUI
 
 - **Summary**: The `PasswordManagerUI` class represents the graphical user interface (GUI) of the application. It encapsulates the UI elements and interactions, providing an abstracted interface for user interaction.
@@ -45,6 +49,27 @@ The project leverages OOP principles to create a structured and maintainable cod
 
 - **Summary**: The `PasswordSearcher` class handles the search for website information and loading passwords from a JSON file. It abstracts the search process and uses encapsulation to manage data retrieval and presentation.
 <br>
+
+## Languages and Utilities Used
+
+- **Python**
+- **PyCharm**
+
+[<img align="center" alt="PyCharm Icon" width="50px" src="https://upload.wikimedia.org/wikipedia/commons/1/1d/PyCharm_Icon.svg" />][pycharm]
+[<img align="left" alt="Python Icon" width="40px" src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" />][python]
+
+[pycharm]: https://www.jetbrains.com/pycharm/
+[python]: https://www.python.org/
+
+## Environments Used
+
+- **Windows**
+
+[<img align="left" alt="Microsoft Icon" width="35px" src="https://upload.wikimedia.org/wikipedia/commons/3/34/Windows_logo_-_2012_derivative.svg" />][windows]
+
+[windows]: https://www.microsoft.com/
+<br /><br />
+
 
 ## Dependencies
 
@@ -74,3 +99,9 @@ To run the Password Manager Project on your local machine, follow these steps:
 1. Clone the repository to your computer.
 2. Install any required dependencies mentioned in the project documentation.
 3. Run the main application script.
+
+#
+<br>
+
+⬅️ **[Home](https://github.com/infinity-set)**
+
