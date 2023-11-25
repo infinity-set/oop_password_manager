@@ -3,7 +3,6 @@
 ## Table of Contents
 
 - [Project Overview](#project-overview)
-  - [Object-Oriented Programming (OOP) Version](#object-oriented-programming-oop-version)
   - [Non-OOP Version](#non-oop-version)
 - [Object-Oriented Programming (OOP) Components](#object-oriented-programming-oop-components)
   - [PasswordManagerUI](#1-passwordmanagerui)
@@ -12,6 +11,7 @@
   - [PasswordSearcher](#4-passwordsearcher)
 - [Dependencies](#dependencies)
 - [Getting Started](#getting-started)
+<br>
 
 ## Project Overview
 
@@ -24,11 +24,11 @@ If you're interested in the non-OOP version of the Password Manager Project, you
 [Password Manager (Non-OOP Version)](https://github.com/infinity-set/password_manager)
 
 This non-OOP version provides the same password management capabilities but is implemented without the use of OOP principles.
-
+<br>
 ## Object-Oriented Programming (OOP) Components
 
 The project leverages OOP principles to create a structured and maintainable codebase. Here are the main OOP components in the project:
-
+<br>
 ### 1. PasswordManagerUI
 
 - **Summary**: The `PasswordManagerUI` class represents the graphical user interface (GUI) of the application. It encapsulates the UI elements and interactions, providing an abstracted interface for user interaction.
@@ -44,6 +44,7 @@ The project leverages OOP principles to create a structured and maintainable cod
 ### 4. PasswordSearcher
 
 - **Summary**: The `PasswordSearcher` class handles the search for website information and loading passwords from a JSON file. It abstracts the search process and uses encapsulation to manage data retrieval and presentation.
+<br>
 
 ## Dependencies
 
@@ -64,6 +65,7 @@ The Password Manager application relies on the following Python libraries:
 - **json:** The json module is used to work with JSON (JavaScript Object Notation) data. In the application, it's used to load and save password data in JSON format.
 
 - **sys:** The sys module provides access to some variables used or maintained by the Python interpreter. It's used to gracefully exit the program when the user chooses to quit.
+<br>
 
 ## Getting Started
 
