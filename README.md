@@ -21,7 +21,7 @@ The Password Manager Project is an Object-Oriented Programming (OOP) version of 
 
 If you're interested in the non-OOP version of the Password Manager Project, you can find it on GitHub at the following link:
 
-[Password Manager (Non-OOP Version)](https://github.com/infinity-set/password_manager)
+[Password Manager GUI (Non-OOP Version)](https://github.com/infinity-set/password_manager)
 
 This non-OOP version provides the same password management capabilities but is implemented without the use of OOP principles.
 <br>
