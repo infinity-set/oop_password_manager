@@ -1,6 +1,6 @@
 # Password Manager Project - Object Oriented Programming
 
-![Password Manager Logic](https://github.com/infinity-set/oop_password_manager/assets/142350896/ac4af845-5451-4aee-97fb-0c6b17e96a1a)
+![Password Manager Logic](https://github.com/infinity-set/oop_password_manager/assets/142350896/e34265ed-2f59-4318-b74c-7279b664fa85)
 
 ## Table of Contents
 
