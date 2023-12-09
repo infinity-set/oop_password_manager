@@ -1,6 +1,7 @@
 # Import the 'random' module and the 'Tkinter' library for generating passwords and creating GUI
 import random as r
-from tkinter import *
+from tkinter import END
+
 
 # Define the 'PasswordGenerator' class
 class PasswordGenerator:

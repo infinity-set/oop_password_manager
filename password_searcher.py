@@ -51,7 +51,7 @@ class PasswordSearcher:
                 return json.load(json_data)  # Load the JSON data and return it
         except FileNotFoundError:
             # Handle the case when the file is not found and show an information message
-            messagebox.showinfo(title="Search Result", message="No password file found.")
+            messagebox.showinfo(title="Search Result", message="No 'JSON' password file found.")
             return {}  # Return an empty dictionary
         except json.JSONDecodeError:
             # Handle the case when the JSON data is corrupt or improperly formatted

@@ -2,35 +2,62 @@
 import pandas as pd  # For working with data in tabular format
 import os  # For interacting with the operating system
 import json  # For working with JSON data
-from tkinter import messagebox  # For displaying message boxes in the GUI
+from tkinter import messagebox, END  # Import the tkinter library for building the GUI
 
-# Define the 'PasswordSaver' class
+
+# Define the 'PasswordSaver'
 class PasswordSaver:
-    # Set up requirements in order to call the "clear_input_fields" method from "main"
-    def __init__(self, password_manager_ui=None):  # Accept PasswordManagerUI instance as an argument
-        self.password_manager_ui = password_manager_ui  # Store the reference to PasswordManagerUI
-
+    def __init__(self):
+        pass  # There are no attributes to initialize
 
     # Method for saving password data
     def save(self, website, username, email, password, timestamp_string):
-        if len(website) > 0 and len(email) > 0 and len(password) > 0 and len(username) > 0:
-            # List of save functions along with their format names
+
+        # Get the text value from the input fields
+        self.website = website.get().title()
+        self.username = username.get()
+        self.email = email.get()
+        self.password = password.get()
+
+        # Check if input fields (website, email, password, username) are not empty
+        if len(self.website) > 0 and len(self.email) > 0 and len(self.password) > 0 and len(self.username) > 0:
+            # Define a list of save functions along with their format names
             save_functions = [
                 (self.save_to_csv, "CSV"),
-                (self.save_to_text_file, "TEXT"),
-                (self.save_to_json, "JSON")
+                (self.save_to_json, "JSON"),
+                (self.save_to_text_file, "TEXT")
             ]
-            for save_function, format_name in save_functions:
-                try:
-                    # Call the appropriate save function for each format
-                    save_function(website, username, email, password, timestamp_string)
-                    print(f"Saved {format_name}...\n")
-                except:
-                    # Handle issues that may occur while saving and show a warning message
-                    messagebox.showwarning(title="Warning", message=f"Could not save {format_name}.")
-                # Clear input fields and show a success message
-            self.password_manager_ui.clear_input_fields()  # Call the clear_input_fields method from "main"
-            messagebox.showinfo(title="Complete", message="Files are updated.")
+
+            # Initialize a status variable to track success or failure of save operations
+            status = True
+
+            try:
+                # Iterate through the list of save functions
+                for save_function, format_name in save_functions:
+                    try:
+                        # Call the appropriate save function for each format
+                        save_function(self.website, self.username, self.email, self.password, timestamp_string)
+                    except:
+                        # Handle exceptions that may occur during saving and show a warning message
+                        messagebox.showwarning(title="Warning", message=f"Could not save {format_name}.")
+                        status = False
+                    else:
+                        # Print a success message on the terminal
+                        print(f"Saved {format_name}...\n")
+
+            except:
+                # Handle exceptions that may occur during the iteration through save functions
+                messagebox.showinfo(title="Incomplete", message="An error occurred while processing your request.")
+            else:
+                # Check the overall status of save operations
+                if status:
+                    # Show a success message and clear input fields
+                    messagebox.showinfo(title="Complete", message="Files are updated.")
+                    self.clear_input_fields(website, email, password, username)
+                else:
+                    # Show an incomplete message if not all files were updated
+                    messagebox.showinfo(title="Incomplete", message="Not all files were updated.")
+
         else:
             # Show an error message if any input field is empty
             messagebox.showerror(title="Error", message="You cannot have empty fields.")
@@ -90,3 +117,10 @@ class PasswordSaver:
             contents.update(new_data)
             with open("./json_passwords.json", mode="w") as json_file:
                 json.dump(contents, json_file, indent=4)
+
+    def clear_input_fields(self, website, email, password, username):
+        # Delete the content of the input fields using their indexes
+        website.delete(0, END)
+        email.delete(0, END)
+        password.delete(0, END)
+        username.delete(0, END)
