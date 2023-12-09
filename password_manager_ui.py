@@ -74,14 +74,11 @@ class PasswordManagerUI:
         self.exit_button.grid(column=1, row=6, columnspan=2, pady=20) # Place the button in the grid
 
     def search_website(self):
-        # Get the entered website name from the entry field
-        website_name = self.website_entry.get()
-
-        # Load password data from the JSON file
-        search_dict = self.password_searcher.load_passwords_from_json("./json_passwords.json")
+        # Get the entered website name from the entry field and convert the input to title case
+        website_name = self.website_entry.get().title()
 
         # Call the search_website method from PasswordSearcher class
-        self.password_searcher.search_website(website_name, search_dict)
+        self.password_searcher.search_website(website_name)
 
     def generate_password(self):
         # Call the generate_password method from PasswordGenerator class

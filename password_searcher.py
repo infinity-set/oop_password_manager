@@ -10,11 +10,11 @@ class PasswordSearcher:
         pass
 
     # Method for searching for website information in a provided dictionary
-    def search_website(self, website_name, search_dict):
+    def search_website(self, website_name):
+        # Load password data from the JSON file
+        search_dict = self.load_passwords_from_json("./json_passwords.json")
         if search_dict == {}:
             return # Return early if the search dictionary is empty
-
-        website_name = website_name.title()  # Convert the input to title case
 
         if len(website_name) == 0:
             return  # Return if the website name is empty
